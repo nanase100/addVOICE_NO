@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "addVOICE_NO", "addVOICE_NO\addVOICE_NO.csproj", "{156E97EE-0D71-4E0F-91FB-BF56EDF195DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{156E97EE-0D71-4E0F-91FB-BF56EDF195DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156E97EE-0D71-4E0F-91FB-BF56EDF195DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156E97EE-0D71-4E0F-91FB-BF56EDF195DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156E97EE-0D71-4E0F-91FB-BF56EDF195DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BBD688A-9426-4BCF-B7D2-B09DBCDA4919}
+	EndGlobalSection
+EndGlobal
