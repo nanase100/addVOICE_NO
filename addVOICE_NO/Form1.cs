@@ -68,7 +68,6 @@ namespace addVOICE_NO
                 }
             }
 
-
             var type = (DataManager.EngineType)comboBox1.SelectedIndex;
 
             dataManager.Proc(scenarioPath, takechckPath, type);

@@ -12,11 +12,13 @@ namespace addVOICE_NO
     {
         public string serifText { set; get; } = "";
         public string voiceText { set; get; } = "";
+        public int      hitCount { set; get; } = 0;
 
         public takeData( string voice, string serif)
         {
             serifText = serif;
             voiceText = voice;
+            hitCount = 0;
         }
     }
 
