@@ -170,12 +170,12 @@ namespace addVOICE_NO
             string ret ="";
 
             if( takeCheckData.takeDataDic.TryGetValue(charName, out list) == false ) return ret;
-
             
             foreach ( var tmp in list)
             {
-                if( tmp.serifText.IndexOf( searchText ) != -1 )
+                if( tmp.serifText.IndexOf( searchText ) != -1 && tmp.hitCount == 0 )
                 {
+                    tmp.hitCount++;
                     ret = tmp.voiceText;
                     break;
                 }
