@@ -69,8 +69,9 @@ namespace addVOICE_NO
             }
 
             var type = (DataManager.EngineType)comboBox1.SelectedIndex;
+            var cmpType = (DataManager.StrCmpType)comboBox2.SelectedIndex;
 
-            dataManager.Proc(scenarioPath, takechckPath, type);
+            dataManager.Proc(scenarioPath, takechckPath, type, cmpType);
 
             dataManager.OutputText(outputPath);
 
@@ -80,6 +81,7 @@ namespace addVOICE_NO
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
