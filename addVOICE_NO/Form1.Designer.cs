@@ -41,15 +41,18 @@
             this.outputDirText = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // doButton
             // 
-            this.doButton.Location = new System.Drawing.Point(171, 247);
+            this.doButton.Location = new System.Drawing.Point(171, 305);
             this.doButton.Name = "doButton";
             this.doButton.Size = new System.Drawing.Size(151, 44);
             this.doButton.TabIndex = 2;
@@ -68,7 +71,7 @@
             this.groupBox1.Size = new System.Drawing.Size(310, 68);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ボイス番号を追加するスクリプトののフォルダ";
+            this.groupBox1.Text = "ボイス番号を追加するスクリプトのあるフォルダ";
             // 
             // textDirButton
             // 
@@ -141,7 +144,7 @@
             this.groupBox3.Size = new System.Drawing.Size(310, 82);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "出力先";
+            this.groupBox3.Text = "出力先フォルダを指定してください";
             // 
             // outputDirButton
             // 
@@ -182,9 +185,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Location = new System.Drawing.Point(18, 247);
+            this.groupBox4.Location = new System.Drawing.Point(12, 305);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(147, 44);
+            this.groupBox4.Size = new System.Drawing.Size(153, 44);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "ゲームエンジン";
@@ -200,21 +203,45 @@
             "yu-ris"});
             this.comboBox1.Location = new System.Drawing.Point(3, 15);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 20);
+            this.comboBox1.Size = new System.Drawing.Size(147, 20);
             this.comboBox1.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Location = new System.Drawing.Point(12, 247);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(310, 44);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "テキストの比較をどのくらいしっかりするか？";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "完全に一致する",
+            "ほとんど一致する",
+            "ある程度一致する(非推奨)"});
+            this.comboBox2.Location = new System.Drawing.Point(6, 18);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(298, 20);
+            this.comboBox2.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 311);
+            this.ClientSize = new System.Drawing.Size(334, 361);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.doButton);
-            this.MaximumSize = new System.Drawing.Size(9999, 350);
-            this.MinimumSize = new System.Drawing.Size(350, 350);
+            this.MaximumSize = new System.Drawing.Size(9999, 400);
+            this.MinimumSize = new System.Drawing.Size(350, 400);
             this.Name = "Form1";
             this.Text = "ボイス未設定のスクリプトにテイクチェックシートからボイス番号を割り当てるツール";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -225,6 +252,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -244,6 +272,8 @@
         private System.Windows.Forms.CheckBox outputSelectCheck;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
