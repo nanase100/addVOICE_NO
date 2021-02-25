@@ -18,8 +18,8 @@ namespace addVOICE_NO
          
         public enum EngineType
         {
-            EngineType_CS2   = 0,
-            EngineType_yuris = 1,
+            CS2   = 0,
+            yuris = 1,
         }
 
         public enum StrCmpType
@@ -30,7 +30,7 @@ namespace addVOICE_NO
         }
 
 
-        private EngineType          procType = EngineType.EngineType_CS2;
+        private EngineType          procType = EngineType.CS2;
         private takeCheck           takeCheckData = new takeCheck();
         private List<scriptText>    textFileList = new List<scriptText>();
         private List<takeData> list;
@@ -124,7 +124,7 @@ namespace addVOICE_NO
             MatchCollection results;
             Regex regex;
 
-            if(this.procType == EngineType.EngineType_CS2)
+            if(this.procType == EngineType.CS2)
             {
                 regex = new Regex(@"^([^\x01-\x7E]+)(\r\n\t)(.+)\r", RegexOptions.Multiline);
             }
@@ -139,10 +139,10 @@ namespace addVOICE_NO
             foreach ( Match tmp in results)
             {
                 string tmpStr = tmp.Groups[1].ToString();
-                if (this.procType == EngineType.EngineType_yuris && tmpStr.IndexOf("\\VO") != -1 ) continue;       //名前の前に\voがあるならスルー。
-                if (this.procType == EngineType.EngineType_CS2 && tmpStr.IndexOf(" pcm") != -1) continue;       //名前の前にpcmがあるならスルー。
+                if (this.procType == EngineType.yuris && tmpStr.IndexOf("\\VO") != -1 ) continue;       //名前の前に\voがあるならスルー。
+                if (this.procType == EngineType.CS2 && tmpStr.IndexOf(" pcm") != -1) continue;       //名前の前にpcmがあるならスルー。
 
-                if (this.procType == EngineType.EngineType_CS2)
+                if (this.procType == EngineType.CS2)
                 {
                     serifText = tmp.Groups[3].ToString();
                     destText = tmp.Groups[1].ToString() + tmp.Groups[2].ToString() + tmp.Groups[3].ToString();
@@ -155,9 +155,9 @@ namespace addVOICE_NO
                     destText = "【"+tmp.Groups[2].ToString() + "】"+ tmp.Groups[3].ToString(); 
                 }
 
-                charName    = (this.procType == EngineType.EngineType_CS2 ?  tmp.Groups[1].ToString() : tmp.Groups[2].ToString() );
+                charName    = (this.procType == EngineType.CS2 ?  tmp.Groups[1].ToString() : tmp.Groups[2].ToString() );
                 voiceName   = this.VoiceNameGet(serifText, charName, cmpType);
-                if (this.procType == EngineType.EngineType_CS2)
+                if (this.procType == EngineType.CS2)
                 {
                     newStr = "\t" + @"pcm " + voiceName + Environment.NewLine + tmp.Groups[1].ToString() + tmp.Groups[2].ToString() + tmp.Groups[3].ToString();
                 }
