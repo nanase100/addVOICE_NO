@@ -13,7 +13,7 @@ namespace addVOICE_NO
 {
     public partial class Form1 : Form
     {
-        DataManager dataManager = new DataManager();
+        readonly DataManager dataManager = new DataManager();
 
         /// <summary>
         /// 
@@ -82,6 +82,8 @@ namespace addVOICE_NO
         {
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
+
+            DataManager.LevenshteinRate("ssaaaa","aaaa");
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -141,16 +143,18 @@ namespace addVOICE_NO
             if (ForDswitch)
             {
                 //FolderBrowserDialogクラスのインスタンスを作成
-                OpenFileDialog ofd = new OpenFileDialog();
+                OpenFileDialog ofd = new OpenFileDialog
+                {
 
-                //上部に表示する説明テキストを指定する
-                ofd.DefaultExt = ".txt";
+                    //上部に表示する説明テキストを指定する
+                    DefaultExt = ".txt",
 
-                ofd.Title = "フォルダを指定してください。";
+                    Title = "フォルダを指定してください。",
 
-                ofd.Filter = "TXTファイル(*.txt)|*.txt|すべてのファイル(*.*)|*.*";
+                    Filter = "TXTファイル(*.txt)|*.txt|すべてのファイル(*.*)|*.*",
 
-                ofd.InitialDirectory = defaultPath;
+                    InitialDirectory = defaultPath
+                };
                 //ダイアログを表示する
                 if (ofd.ShowDialog(this) == DialogResult.OK)
                 {
@@ -161,22 +165,24 @@ namespace addVOICE_NO
             else
             {
                 //FolderBrowserDialogクラスのインスタンスを作成
-                FolderBrowserDialog fbd = new FolderBrowserDialog();
+                FolderBrowserDialog fbd = new FolderBrowserDialog
+                {
 
-                //上部に表示する説明テキストを指定する
-                fbd.Description = "フォルダを指定してください。";
+                    //上部に表示する説明テキストを指定する
+                    Description = "フォルダを指定してください。",
 
-                //ルートフォルダを指定する
-                //デフォルトでDesktop
-                fbd.RootFolder = Environment.SpecialFolder.Desktop;
+                    //ルートフォルダを指定する
+                    //デフォルトでDesktop
+                    RootFolder = Environment.SpecialFolder.Desktop,
 
-                //最初に選択するフォルダを指定する
-                //RootFolder以下にあるフォルダである必要がある
-                fbd.SelectedPath = defaultPath;
+                    //最初に選択するフォルダを指定する
+                    //RootFolder以下にあるフォルダである必要がある
+                    SelectedPath = defaultPath,
 
-                //ユーザーが新しいフォルダを作成できるようにする
-                //デフォルトでTrue
-                fbd.ShowNewFolderButton = true;
+                    //ユーザーが新しいフォルダを作成できるようにする
+                    //デフォルトでTrue
+                    ShowNewFolderButton = true
+                };
 
                 //ダイアログを表示する
                 if (fbd.ShowDialog(this) == DialogResult.OK)

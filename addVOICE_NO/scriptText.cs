@@ -11,7 +11,7 @@ namespace addVOICE_NO
     class scriptText :  GetEncodeClass
     {
         public string  filePath { set; get; } = "";
-        public string   textData { set; get; } = "";
+        public string  textData { set; get; } = "";
         public Encoding enc;
 
         public void Load(string path)

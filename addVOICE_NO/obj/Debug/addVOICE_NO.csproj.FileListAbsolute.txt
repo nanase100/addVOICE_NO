@@ -8,3 +8,4 @@ C:\Users\NEXTON002\source\repos\addVOICE_NO\addVOICE_NO\obj\Debug\addVOICE_NO.ex
 C:\Users\NEXTON002\source\repos\addVOICE_NO\addVOICE_NO\obj\Debug\addVOICE_NO.pdb
 C:\Users\NEXTON002\source\repos\addVOICE_NO\addVOICE_NO\obj\Debug\addVOICE_NO.Form1.resources
 C:\Users\NEXTON002\source\repos\addVOICE_NO\addVOICE_NO\obj\Debug\addVOICE_NO.csprojAssemblyReference.cache
+C:\Users\NEXTON002\source\repos\addVOICE_NO\addVOICE_NO\bin\Debug\addVOICE_NO.exe.CodeAnalysisLog.xml

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Localized>
+  <String Key="Category">カテゴリ</String>
+  <String Key="Certainty">確実性</String>
+  <String Key="CollapseAll">すべて折りたたむ</String>
+  <String Key="CheckId">ID の確認</String>
+  <String Key="Error">エラー</String>
+  <String Key="Errors">エラー</String>
+  <String Key="ExpandAll">すべて展開</String>
+  <String Key="Help">ヘルプ</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">メッセージ</String>
+  <String Key="LocationNotStoredInPdb">[場所は Pdb に格納されていません]</String>
+  <String Key="Project">プロジェクト</String>
+  <String Key="Resolution">解像度</String>
+  <String Key="Rule">ルール</String>
+  <String Key="RuleFile">規則ファイル</String>
+  <String Key="RuleDescription">規則の説明</String>
+  <String Key="Source">ソース</String>
+  <String Key="Status">状態</String>
+  <String Key="Target">ターゲット</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">コード分析レポート</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0001" Kind="Engine">
+   <Type>Phx.FatalError</Type>
+   <ExceptionMessage>種類 'Phx.FatalError' の例外がスローされました。</ExceptionMessage>
+   <StackTrace>   場所 Phx.FatalError.Dispatch()
+   場所 Phx.Logging.Diagnostics.DiagnosticMessage.LogMessage(Severity severity, DiagnosticInfo diagnosticInfo, SourceContext sourceContext, String descriptionString)
+   場所 Phx.PE.PEUtilities.UserError(String infoMessage)
+   場所 Phx.Pdb.ReaderImplementation.Open(Boolean loadTypeOnly)
+   場所 Phx.PEModuleUnit.LoadPdb()
+   場所 Phx.PE.ReaderPhase.CheckSymbolicInformation()
+   場所 Phx.PEModuleUnit.LoadGlobalSymbols()
+   場所 Phx.PEModuleUnit.LoadEncodedIRUnitList()
+   場所 Phx.PEModuleUnit.GetEnumerableContributionUnit(ContributionUnitEnumerationKind contributionUnitEnumerationKind)
+   場所 Phx.PEModuleUnit.GetEnumerableContributionUnit()
+   場所 Microsoft.FxCop.Engines.Phoenix.PreScanPass.GetFunctionUnits(PEModuleUnit peModuleUnit)
+   場所 Microsoft.FxCop.Engines.Phoenix.PreScanPass.Execute(ModuleUnit moduleUnit)
+   場所 Phx.Passes.Pass.DoPass(ModuleUnit moduleUnit)
+   場所 Phx.Passes.PassList.DoPassList(ModuleUnit moduleUnit)
+   場所 Microsoft.FxCop.Engines.Phoenix.PhoenixAnalysisEngine.Host.ExecutePasses(PEModuleUnit peModuleUnit)
+   場所 Microsoft.FxCop.Engines.Phoenix.PhoenixAnalysisEngine.AnalyzeInternal()
+   場所 Microsoft.FxCop.Engines.Phoenix.PhoenixAnalysisEngine.Analyze()
+   場所 Microsoft.FxCop.Common.EngineManager.Analyze(Project project, Boolean verboseOutput)</StackTrace>
+  </Exception>
+ </Exceptions>
+</FxCopReport>
